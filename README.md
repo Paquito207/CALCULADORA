@@ -1,16 +1,141 @@
-# React + Vite
+# 🧮 Calculadora Web — Prueba Técnica
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web que implementa una calculadora funcional, construida con React + Vite.
+Incluye una interfaz limpia, componentes reutilizables y manejo robusto de operaciones matemáticas.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Objetivo de la prueba técnica
 
-## React Compiler
+Evaluar habilidades prácticas en:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* HTML
+* CSS
+* JavaScript
+* Framework moderno (React, Vue o Angular — en este caso: React con Hooks)
+* Arquitectura, modularidad y buenas prácticas
 
-## Expanding the ESLint configuration
+La prueba consiste en desarrollar una calculadora con operaciones básicas, soporte para decimales y controles esenciales.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## ✔️ Funcionalidades implementadas
+
+### Operaciones
+
+* Suma
+* Resta
+* Multiplicación
+* División
+
+### Soportes adicionales
+
+* Números decimales
+* Cambiar signo (+/-)
+* Botón AC (limpiar todo)
+* Botón ← para eliminar el último dígito
+* División entre cero controlada (muestra "Error")
+
+
+## 🛠️ Requisitos técnicos cumplidos
+
+* UI y lógica implementadas con React + Hooks
+* Proyecto creado con Vite (rápido y moderno)
+* Código modular dividido en:
+
+  * `components/` (UI)
+  * `utils/` (lógica matemática)
+* Estilos en un archivo central (`styles.css`)
+* Separación limpia entre presentación y lógica
+* Repositorio compatible con GitHub/GitLab
+* Proyecto completamente ejecutable vía npm
+
+
+## 📦 Requisitos previos
+
+Asegúrate de tener instalado:
+
+* Node.js LTS
+* npm (incluido con Node)
+
+
+# ▶️ Ejecución ordenada del proyecto (React + Vite)
+
+1. **Abrir la terminal**
+   PowerShell, CMD o terminal del editor (VS Code recomendado).
+
+2. **Ir al directorio del proyecto**
+   Ajusta la ruta según tu máquina:
+
+   cd C:\Users\TuUsuario\Documentos\CALCULADORA
+
+
+3. **Instalar dependencias**
+   Esto descarga React, Vite y librerías necesarias:
+
+   npm install
+
+4. **Ejecutar en modo desarrollo**
+   Inicia el servidor local con recarga automática:
+
+   npm run dev
+
+5. **Abrir la aplicación en el navegador**
+   Por defecto Vite usa este puerto:
+
+   http://localhost:5173
+
+
+## 📦 Build de producción
+
+npm run build
+
+
+## 📁 Estructura del proyecto
+
+
+CALCULADORA/
+├─ src/
+│  ├─ assets/
+│  ├─ components/
+│  │   ├─ Button.jsx
+│  │   ├─ Display.jsx
+│  │   └─ Keypad.jsx
+│  ├─ utils/
+│  │   └─ math.js
+│  ├─ App.css
+│  ├─ App.jsx
+│  ├─ index.css
+│  └─ main.jsx
+├─ public/
+├─ package.json
+└─ README.md
+
+
+
+## 🧩 Decisiones de diseño
+
+* React + Vite para un entorno rápido y moderno.
+* Componentes pequeños y reutilizables:
+
+  * `Button` es genérico.
+  * `Keypad` solo organiza botones.
+  * `Display` recibe valores ya calculados.
+* **Lógica matemática separada en `utils/math.js`**
+  Facilita pruebas, reusabilidad y evita mezclar cálculo con la UI.
+* **Manejo seguro de números flotantes**
+  Se usa `toFixed(12)` y conversión controlada para evitar errores comunes de precisión.
+* **Estado controlado**
+  Se gestionan:
+
+  * número actual
+  * número previo
+  * operador
+  * modo de sobrescritura
+* **Diseño minimalista** optimizado para claridad y legibilidad.
+
+
+## 🧪 Cobertura funcional
+
+* Entrada controlada para evitar errores de digitación.
+* Limpieza, retroceso, decimales y cambio de signo.
+* Cálculos encadenados (ej: 5 + 3 × 2).
+* Manejo explícito de errores (división por cero).
