@@ -98,6 +98,7 @@ CALCULADORA/
 │  ├─ components/
 │  │   ├─ Button.jsx
 │  │   ├─ Display.jsx
+│  │   ├─ History.jsx
 │  │   └─ Keypad.jsx
 │  ├─ utils/
 │  │   └─ math.js
