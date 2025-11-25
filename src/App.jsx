@@ -294,6 +294,9 @@ export default function App() {
           />
         </div>
       </div>
+      <footer className="credits">
+        <span>Hecho por Robert C. ☕ / github - Paquito207 © {new Date().getFullYear()}</span>
+      </footer>
     </div>
   );
 }
